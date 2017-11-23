@@ -1,6 +1,10 @@
 import math as m
 
-
+# hasta el momento solo estan definidas las ecuaciones ya despejadas para cada
+# caso en las ecuaciones de movimiento rectilinio en la horizontal, habria que
+# establecer una forma de agregar caida libre de forma que las graficas salgan
+# adecuadas para ese tipo de movimiento, adicional verificar como agregar el
+# movimiento en 2D (parabolico)
 
 # Funciones para la ec(1) que corresponde a:
 # vFinal - vInicial = acceleration*time
@@ -35,7 +39,7 @@ def eC2_xInicial(acceleration, vInicial, time, xFinal):
     xInicial = xFinal - (0.5)*acceleration*time**2 - vInicial*time
     return xInicial
 
-def eC2_vInicial(acceleration, xFinal, time, xFinal):
+def eC2_vInicial(acceleration, xFinal, xInicial, time):
     vInicial = (xFinal - xInicial - (0.5)*acceleration*time**2)/time
     return vInicial
 
